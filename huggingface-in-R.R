@@ -5,7 +5,6 @@ install.packages(c("text","reticulate","dplyr","keras","tm","tidyr", "wordcloud"
 library(text)
 library(reticulate)
 library(dplyr)
-library(keras)
 library(tm)
 library(tidyr)
 library(wordcloud)
@@ -25,6 +24,7 @@ install_keras(
   extra_packages = NULL, 
   pip_ignore_installed = TRUE )
 
+library(keras)
 ###Use reticulate to install transformers in R python environment
 reticulate::py_install("transformers")
 
