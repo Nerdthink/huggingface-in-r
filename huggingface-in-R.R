@@ -151,6 +151,6 @@ textrpp_install()
 textrpp_initialize()
 
 classification <- textClassify(dataset,model = "distilbert-base-uncased-finetuned-sst-2-english", set_seed = 1234, return_incorrect_results = TRUE,
-                               ,function_to_apply = "softmax")
+                               function_to_apply = "softmax")
 classification
 comment(classification)
