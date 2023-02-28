@@ -143,3 +143,14 @@ wordcloud(words = neg_words$word, freq = neg_words$freq, scale=c(4, 0.5),
 
 
 
+### Using the text() package
+##Install text required python packages (rpp) in a self-contained environment. 
+textrpp_install()
+
+##Initialize text required python packages to call from R.
+textrpp_initialize()
+
+classification <- textClassify(dataset,model = "distilbert-base-uncased-finetuned-sst-2-english", set_seed = 1234, return_incorrect_results = TRUE,
+                               ,function_to_apply = "softmax")
+classification
+comment(classification)
